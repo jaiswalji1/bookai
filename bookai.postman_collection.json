@@ -1,0 +1,1182 @@
+{
+	"info": {
+		"_postman_id": "4d91df3d-1dfa-4052-a470-b25a6c9c2338",
+		"name": "BookAI APIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25086076"
+	},
+	"item": [
+		{
+			"name": "Auth Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user\",\r\n    \"password\": \"user123$\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Auth Token Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"user\",\r\n    \"password\": \"user123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/auth/token",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 01 Dec 2025 17:42:56 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "182"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI\",\n    \"token_type\": \"bearer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Ollama with Python\",\r\n    \"author\": \"François Chollet\",\r\n    \"gener\": \"Artificial Intelligence\",\r\n    \"year_published\": 2019\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Book Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Ollama with Python\",\r\n    \"author\": \"François Chollet\",\r\n    \"gener\": \"Artificial Intelligence\",\r\n    \"year_published\": 2019\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/books",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 01 Dec 2025 17:51:44 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "180"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Ollama with Python\",\n    \"author\": \"François Chollet\",\n    \"gener\": \"Artificial Intelligence\",\n    \"year_published\": 2019,\n    \"id\": 1,\n    \"summary\": null,\n    \"created_at\": \"2025-12-01T17:51:45.283736Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrieve Books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retrieve Books Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/books",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 01 Dec 2025 17:55:44 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "353"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"title\": \"Ollama with Python\",\n        \"author\": \"François Chollet\",\n        \"gener\": \"Artificial Intelligence\",\n        \"year_published\": 2019,\n        \"id\": 1,\n        \"summary\": null,\n        \"created_at\": \"2025-12-01T17:51:45.283736Z\"\n    },\n    {\n        \"title\": \"Book AI on Python\",\n        \"author\": \"Siddhant\",\n        \"gener\": \"Artificial Intelligence\",\n        \"year_published\": 2020,\n        \"id\": 2,\n        \"summary\": null,\n        \"created_at\": \"2025-12-01T17:55:45.108149Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Retrieve Book By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/books/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retrieve Book By ID Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/books/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 01 Dec 2025 18:06:37 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "180"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Ollama with Python\",\n    \"author\": \"François Chollet\",\n    \"gener\": \"Artificial Intelligence\",\n    \"year_published\": 2019,\n    \"id\": 1,\n    \"summary\": null,\n    \"created_at\": \"2025-12-01T17:51:45.283736Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Book Information",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Ollama with Python\",\r\n    \"author\": \"François Chollet\",\r\n    \"gener\": \"Artificial Intelligence\",\r\n    \"year_published\": 2019,\r\n    \"summary\": \"A 2019 book by François Chollet, Ollama with Python is a guide focused on artificial intelligence, specifically exploring the use of the Ollama framework within the Python programming language.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/books/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Book Information Response",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Ollama with Python\",\r\n    \"author\": \"François Chollet\",\r\n    \"gener\": \"Artificial Intelligence\",\r\n    \"year_published\": 2019,\r\n    \"summary\": \"A 2019 book by François Chollet, Ollama with Python is a guide focused on artificial intelligence, specifically exploring the use of the Ollama framework within the Python programming language.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/books/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 01 Dec 2025 18:12:52 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "372"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"Ollama with Python\",\n    \"author\": \"François Chollet\",\n    \"gener\": \"Artificial Intelligence\",\n    \"year_published\": 2019,\n    \"id\": 1,\n    \"summary\": \"A 2019 book by François Chollet, Ollama with Python is a guide focused on artificial intelligence, specifically exploring the use of the Ollama framework within the Python programming language.\",\n    \"created_at\": \"2025-12-01T17:51:45.283736Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Book By ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/books/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Book By ID Response",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/books/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Mon, 01 Dec 2025 18:19:55 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "45"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book has been deleted\",\n    \"ok\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Review for a book",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"1\",\r\n    \"review_text\": \"An insightful and practical guide for Python developers to dive into AI with the Ollama framework.\",\r\n    \"rating\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/books/1/reviews",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						"1",
+						"reviews"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Review for a book Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"1\",\r\n    \"review_text\": \"An insightful and practical guide for Python developers to dive into AI with the Ollama framework.\",\r\n    \"rating\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/books/1/reviews",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1",
+								"reviews"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 02 Dec 2025 02:17:32 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "191"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": \"1\",\n    \"review_text\": \"An insightful and practical guide for Python developers to dive into AI with the Ollama framework.\",\n    \"rating\": 4,\n    \"id\": 1,\n    \"created_at\": \"2025-12-02T02:17:33.057297Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrieve Review for a book",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/books/1/reviews",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						"1",
+						"reviews"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retrieve Review for a book response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/books/1/reviews",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1",
+								"reviews"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 02 Dec 2025 02:20:49 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "193"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"user_id\": \"1\",\n        \"review_text\": \"An insightful and practical guide for Python developers to dive into AI with the Ollama framework.\",\n        \"rating\": 4,\n        \"id\": 1,\n        \"created_at\": \"2025-12-02T02:17:33.057297Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Generate a summary for text",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"An insightful and practical guide for Python developers to dive into AI with the Ollama framework.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/generate-summary",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"generate-summary"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Generate a summary for text Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"1\",\r\n    \"review_text\": \"An insightful and practical guide for Python developers to dive into AI with the Ollama framework.\",\r\n    \"rating\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/books/1/reviews",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1",
+								"reviews"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 02 Dec 2025 02:17:32 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "191"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": \"1\",\n    \"review_text\": \"An insightful and practical guide for Python developers to dive into AI with the Ollama framework.\",\n    \"rating\": 4,\n    \"id\": 1,\n    \"created_at\": \"2025-12-02T02:17:33.057297Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get a summary and aggregated rating for a book",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/books/1/summary",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"books",
+						"1",
+						"summary"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get a summary and aggregated rating for a book Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/books/1/summary",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1",
+								"summary"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 02 Dec 2025 02:36:33 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "225"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"summary\": \"A 2019 book by François Chollet, Ollama with Python is a guide focused on artificial intelligence, specifically exploring the use of the Ollama framework within the Python programming language.\",\n    \"avg_rating\": 4\n}"
+				}
+			]
+		},
+		{
+			"name": "Get book recommendation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gener\": \"Artificial Intelligence\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/recommendation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"recommendation"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get book recommendation response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NjQ2OTczNzd9.LtNLHDyjZgo6s9vtLgHDqZKTysQujGfdYUH3OAxHnzI",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gener\": \"Artificial Intelligence\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/recommendation",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"recommendation"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 02 Dec 2025 05:13:00 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "621"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"title\": \"Book AI on Python\",\n        \"author\": \"Siddhant\",\n        \"year_published\": 2020,\n        \"created_at\": \"2025-12-01T17:55:45.108149+00:00\",\n        \"gener\": \"Artificial Intelligence\",\n        \"id\": 2,\n        \"summary\": null,\n        \"updated_at\": null\n    },\n    {\n        \"title\": \"Ollama with Python\",\n        \"author\": \"François Chollet\",\n        \"year_published\": 2019,\n        \"created_at\": \"2025-12-01T17:51:45.283736+00:00\",\n        \"gener\": \"Artificial Intelligence\",\n        \"id\": 1,\n        \"summary\": \"A 2019 book by François Chollet, Ollama with Python is a guide focused on artificial intelligence, specifically exploring the use of the Ollama framework within the Python programming language.\",\n        \"updated_at\": \"2025-12-01T18:12:52.931447+00:00\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
